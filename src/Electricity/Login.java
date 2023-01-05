@@ -19,6 +19,8 @@ import javax.swing.JTextField;
 
 public class Login extends JFrame implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
+	
 	JLabel l1, l2, l3, l4;
 	JTextField tf;
 	JPasswordField psw;
@@ -30,7 +32,7 @@ public class Login extends JFrame implements ActionListener {
 
 		// setBounds (x:, y:, width:, height:)
 
-		super("Login Page");
+		super("Página de login");
 		setLayout(null);
 		getContentPane().setBackground(Color.WHITE);
 
@@ -126,6 +128,7 @@ public class Login extends JFrame implements ActionListener {
 				ResultSet rs = c.st.executeQuery(query);
 				if (rs.next()) {
 					String meter = rs.getString("meter_no");
+                    new Project(meter, user).setVisible(true);
 					this.setVisible(false);
 				} else {
 					JOptionPane.showMessageDialog(null, "Login inválido");

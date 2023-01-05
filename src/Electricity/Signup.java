@@ -20,6 +20,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 public class Signup extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
 	
 	JPanel jp;
 	JTextField t1, t2, t3, t4;
@@ -43,17 +45,17 @@ public class Signup extends JFrame implements ActionListener {
 		JLabel l1 = new JLabel("Usuário:");
 		l1.setForeground(Color.DARK_GRAY);
 		l1.setFont(new Font("Tahoma", Font.BOLD, 14)); // nome da fonte, estilo e tamanho
-		l1.setBounds(60, 70, 100, 20);
+		l1.setBounds(20, 70, 100, 20);
 		jp.add(l1);
 
 		t1 = new JTextField();
 		t1.setBounds(220, 70, 150, 20);
 		jp.add(t1);
 
-		JLabel l2 = new JLabel("Nome:");
+		JLabel l2 = new JLabel("Nome completo:");
 		l2.setForeground(Color.DARK_GRAY);
 		l2.setFont(new Font("Tahoma", Font.BOLD, 14));
-		l2.setBounds(60, 110, 100, 20);
+		l2.setBounds(20, 110, 100, 20);
 		jp.add(l2);
 
 		t2 = new JTextField();
@@ -63,7 +65,7 @@ public class Signup extends JFrame implements ActionListener {
 		JLabel l3 = new JLabel("Senha:");
 		l3.setForeground(Color.DARK_GRAY);
 		l3.setFont(new Font("Tahoma", Font.BOLD, 14));
-		l3.setBounds(60, 150, 100, 20);
+		l3.setBounds(20, 150, 100, 20);
 		jp.add(l3);
 
 		t3 = new JTextField();
@@ -73,13 +75,13 @@ public class Signup extends JFrame implements ActionListener {
 		JLabel l4 = new JLabel("Criar conta como:");
 		l4.setForeground(Color.DARK_GRAY);
 		l4.setFont(new Font("Tahoma", Font.BOLD, 14));
-		l4.setBounds(60, 190, 140, 20);
+		l4.setBounds(20, 190, 140, 20);
 		jp.add(l4);
 
-		JLabel l5 = new JLabel("Número do medidor");
+		JLabel l5 = new JLabel("Nº do medidor");
 		l5.setForeground(Color.DARK_GRAY);
 		l5.setFont(new Font("Tahoma", Font.BOLD, 14));
-		l5.setBounds(60, 230, 100, 20);
+		l5.setBounds(20, 230, 100, 20);
 		l5.setVisible(false);
 		jp.add(l5);
 
@@ -160,7 +162,7 @@ public class Signup extends JFrame implements ActionListener {
 				
 				c.st.executeUpdate(str);
 				JOptionPane.showMessageDialog(null, "Conta criada com sucesso!");
-				this.setVisible(true);
+				this.setVisible(false);
 				new Login().setVisible(true);
 			} 
 			catch (Exception e) {

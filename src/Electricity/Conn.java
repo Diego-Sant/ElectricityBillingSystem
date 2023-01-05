@@ -11,7 +11,7 @@ public class Conn {
 	public Conn() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql:///ebs", "dev", "1234567");
+			conn = DriverManager.getConnection("jdbc:mysql:///ebs?autoReconnect=true&useSSL=false", "developer", "1234567");
 			st = conn.createStatement();
 		}
 		catch (Exception e) {
