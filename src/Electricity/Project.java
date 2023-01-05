@@ -37,7 +37,7 @@ public class Project extends JFrame implements ActionListener {
 		JMenuBar jmb = new JMenuBar();
 		JMenu menu = new JMenu("Menu");
 		JMenuItem m1 = new JMenuItem("Novo cliente");
-		JMenuItem m2 = new JMenuItem("Detalhes do cliente");
+		JMenuItem m2 = new JMenuItem("Detalhes dos clientes");
 		JMenuItem m3 = new JMenuItem("Detalhes dos depósitos");
 		JMenuItem m4 = new JMenuItem("Calcular contas");
 		menu.setForeground(Color.BLUE);
@@ -253,8 +253,8 @@ public class Project extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent actionEvent) {
 		String msg = actionEvent.getActionCommand();
 		
-		if (msg.equals("Detalhes do cliente")) {
-			//new CostumerDetails().setVisible(true);
+		if (msg.equals("Detalhes dos clientes")) {
+			new CustomerDetails().setVisible(true);
 		}
 		else if (msg.equals("Novo cliente")) {
 			new NewCustomer().setVisible(true);
@@ -291,7 +291,7 @@ public class Project extends JFrame implements ActionListener {
             //new GenerateBill(meter).setVisible(true);
         }
         else if(msg.equals("Detalhes dos depósitos")){
-            //new DepositDetails().setVisible(true);
+            new DepositDetails().setVisible(true);
         }
         else if(msg.equals("Ver informações")){
             //new ViewInformation(meter).setVisible(true);

@@ -14,6 +14,8 @@ import javax.swing.JLabel;
 
 public class About extends JFrame implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
+	
 	JButton jBttn;
 	JLabel jLb;
 	Font f, f1, f2;
