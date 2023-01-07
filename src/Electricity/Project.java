@@ -260,7 +260,7 @@ public class Project extends JFrame implements ActionListener {
 			new NewCustomer().setVisible(true);
 		}
 		else if(msg.equals("Calcular contas")){
-            //new CalculateBill().setVisible(true);
+            new CalculateBill().setVisible(true);
         }
 		else if(msg.equals("Pagar contas")){
             //new PayBill(meter).setVisible(true);
@@ -284,8 +284,7 @@ public class Project extends JFrame implements ActionListener {
             catch(Exception e){e.printStackTrace();}
         }
         else if(msg.equals("Sair")){
-            this.setVisible(false);
-            new Login().setVisible(true);
+			System.exit(EXIT_ON_CLOSE);
         }
         else if(msg.equals("Gerar Fatura")){
             //new GenerateBill(meter).setVisible(true);
@@ -297,7 +296,7 @@ public class Project extends JFrame implements ActionListener {
             //new ViewInformation(meter).setVisible(true);
         }
         else if(msg.equals("Atualizar informações")){
-            //new UpdateInformation(meter).setVisible(true);
+            new UpdateInformation(meter).setVisible(true);
         }
         else if(msg.equals("Detalhe das contas")){
             //new BillDetails(meter).setVisible(true);

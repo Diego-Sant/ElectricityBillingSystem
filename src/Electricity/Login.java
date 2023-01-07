@@ -141,7 +141,7 @@ public class Login extends JFrame implements ActionListener {
 				System.out.println("Error: " + e);
 			}
 		} else if (actionEvent.getSource() == b2) {
-			this.setVisible(false);
+			System.exit(EXIT_ON_CLOSE);
 		} else if (actionEvent.getSource() == b3) {
 			this.setVisible(false);
 			new Signup().setVisible(true);
