@@ -26,6 +26,7 @@ public class Project extends JFrame implements ActionListener {
 		this.meter = meter;
 		
 		setSize(1920, 1030); // width, height
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		ImageIcon img1 = new ImageIcon(ClassLoader.getSystemResource("icons/Elect1.jpg"));
 		Image img2 = img1.getImage().getScaledInstance(1900, 950, Image.SCALE_DEFAULT);
@@ -263,7 +264,7 @@ public class Project extends JFrame implements ActionListener {
             new CalculateBill().setVisible(true);
         }
 		else if(msg.equals("Pagar contas")){
-            //new PayBill(meter).setVisible(true);
+            new PayBill(meter).setVisible(true);
         }
         else if(msg.equals("Bloco de notas")){
             try{
@@ -293,7 +294,7 @@ public class Project extends JFrame implements ActionListener {
             new DepositDetails().setVisible(true);
         }
         else if(msg.equals("Ver informações")){
-            //new ViewInformation(meter).setVisible(true);
+            new ViewInformation(meter).setVisible(true);
         }
         else if(msg.equals("Atualizar informações")){
             new UpdateInformation(meter).setVisible(true);
