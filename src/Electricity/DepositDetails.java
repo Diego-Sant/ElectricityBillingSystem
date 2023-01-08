@@ -32,6 +32,7 @@ public class DepositDetails extends JFrame implements ActionListener {
 		setLocation(600, 150);
 		setLayout(null);
 		getContentPane().setBackground(Color.WHITE);
+		this.setResizable(false);
 		
 		l1 = new JLabel("Ordenar por nº do medidor");
 		l1.setBounds(20, 20, 150, 20);

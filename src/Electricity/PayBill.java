@@ -33,6 +33,7 @@ public class PayBill extends JFrame implements ActionListener {
 	PayBill(String meter) {
         setLocation(600, 200);
         setSize(900, 600);
+		this.setResizable(false);
 		
 		jp = new JPanel();
 		jp.setBounds(30, 30, 900, 600);
@@ -119,7 +120,7 @@ public class PayBill extends JFrame implements ActionListener {
             	l4.setText(rs.getString("name"));
             }
             
-            rs = c.st.executeQuery("SELECT * FROM bill WHERE meter = '" + meter + "' AND month = 'Janeiro' ");
+            rs = c.st.executeQuery("SELECT * FROM bill WHERE meter = '" + meter + "' AND month = 'January' ");
 		
             while(rs.next()) {
             	l8.setText(rs.getString("units"));

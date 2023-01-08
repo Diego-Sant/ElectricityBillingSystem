@@ -25,7 +25,8 @@ public class Paytm extends JFrame implements ActionListener {
 		this.meter = meter;
 		
         JEditorPane ep = new JEditorPane();
-        ep.setEditable(false);  
+        ep.setEditable(false);
+		this.setResizable(false);
 		
         setLocation(600, 200);
         setSize(800, 800);
@@ -54,8 +55,7 @@ public class Paytm extends JFrame implements ActionListener {
         	ep.setText("<html>Não foi possível carregar</html>");
         }
         
-        JScrollPane scrollPane = new JScrollPane(jp);     
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JScrollPane scrollPane = new JScrollPane(jp);
         getContentPane().add(scrollPane);
         setPreferredSize(new Dimension(800, 600));
         setVisible(true);

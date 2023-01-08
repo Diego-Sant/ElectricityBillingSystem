@@ -33,6 +33,7 @@ public class CalculateBill extends JFrame implements ActionListener {
 	CalculateBill() {
         setLocation(550, 220);
         setSize(750, 500);
+		this.setResizable(false);
 		
 		jp = new JPanel();
 		jp.setBounds(30, 30, 700, 500);

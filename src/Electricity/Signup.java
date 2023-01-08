@@ -32,6 +32,7 @@ public class Signup extends JFrame implements ActionListener {
 
 	Signup() {
 		setBounds(600, 250, 700, 400);
+		this.setResizable(false);
 
 		jp = new JPanel();
 		jp.setBounds(30, 30, 650, 300);

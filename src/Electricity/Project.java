@@ -25,6 +25,8 @@ public class Project extends JFrame implements ActionListener {
 		super("Sistema de Faturamento de Eletricidade"); // title
 		this.meter = meter;
 		
+		this.setResizable(false);
+		
 		setSize(1920, 1030); // width, height
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -287,8 +289,8 @@ public class Project extends JFrame implements ActionListener {
         else if(msg.equals("Sair")){
 			System.exit(EXIT_ON_CLOSE);
         }
-        else if(msg.equals("Gerar Fatura")){
-            //new GenerateBill(meter).setVisible(true);
+        else if(msg.equals("Gerar fatura")){
+            new GenerateBill(meter).setVisible(true);
         }
         else if(msg.equals("Detalhes dos depósitos")){
             new DepositDetails().setVisible(true);
@@ -300,7 +302,7 @@ public class Project extends JFrame implements ActionListener {
             new UpdateInformation(meter).setVisible(true);
         }
         else if(msg.equals("Detalhe das contas")){
-            //new BillDetails(meter).setVisible(true);
+            new BillDetails(meter).setVisible(true);
         }
 	}
 	

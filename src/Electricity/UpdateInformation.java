@@ -31,6 +31,7 @@ public class UpdateInformation extends JFrame implements ActionListener {
 	
 	UpdateInformation(String meter) {
 		this.meter = meter;
+		this.setResizable(false);
 		
         setLocation(600, 200);
         setSize(950, 450);

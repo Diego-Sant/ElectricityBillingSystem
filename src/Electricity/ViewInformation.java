@@ -24,6 +24,8 @@ public class ViewInformation extends JFrame implements ActionListener {
 	JPanel jp;
 	
 	ViewInformation(String meter) {
+		this.setResizable(false);
+		
         setLocation(600, 200);
         setSize(850, 650);
 		

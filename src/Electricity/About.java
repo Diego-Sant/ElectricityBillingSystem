@@ -24,6 +24,8 @@ public class About extends JFrame implements ActionListener {
 	
 	public About() {
 		
+		this.setResizable(false);
+		
 		// setBounds (x:, y:, width:, height:)
 		
 		// Configuração botão de sair

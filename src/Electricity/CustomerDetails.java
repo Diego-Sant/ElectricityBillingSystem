@@ -24,6 +24,7 @@ public class CustomerDetails extends JFrame implements ActionListener {
 		super("Detalhes dos clientes");
 		setSize(1200, 650);
 		setLocation(400, 150);
+		this.setResizable(false);
 		
 		try {
 			Conn c = new Conn();
